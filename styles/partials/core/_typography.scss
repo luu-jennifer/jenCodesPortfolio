@@ -1,0 +1,55 @@
+@use "../utilities/variables" as *;
+
+// text style catalog
+html {
+  //set font size to 20px = 1rem
+  font-size: 125%;
+}
+
+
+body {
+  //TODO: UPDATE WITH FONT VARIABLE
+  font-family: 'Courier New', Courier, monospace;
+  font-size: $baseFontSize;
+  color: $black;
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+// heading family
+h1 {
+  //TODO: UPDATE FONT FAMILY
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 5.56rem;
+  font-weight: bold;
+  color: $white;
+  line-height: 5rem;
+}
+
+h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 4.35rem;
+  line-height: 2.9rem;
+  color: $black;
+  letter-spacing: 0.45rem;
+}
+
+ul,
+li,
+a,
+input,
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  line-height: 1.6rem;
+  letter-spacing: 0.1rem;
+}

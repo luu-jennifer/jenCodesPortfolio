@@ -1,0 +1,97 @@
+@use "../utilities/variables" as *;
+
+.about,
+.skills,
+.projects,
+.contact {
+  padding: 10rem 0 10rem 0;
+}
+
+// .about section styles
+.about {
+  p {
+    margin-top: 3rem;
+  }
+}
+
+// .skills section styles
+.skills {
+  background-color: $tertiary;
+  .iconContainer {
+    margin: 5rem auto 1rem auto;
+    max-width: 50%;
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        margin: 0 auto;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+// .projects section styles 
+.projects {
+  ul {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  li {
+    max-width: 20vw;
+    text-align: center;
+    img {
+      border-radius: 10%;
+      border: 1px solid black;
+      margin: 1rem;
+    }
+    a {
+      padding: .5rem 1rem;
+      background-color: $white;
+      border: 2px solid $secondary;
+      border-radius: 10%;
+      margin: 2rem 1rem;
+      &:hover,
+      &:focus {
+        background-color: $tertiary;
+      }
+    }
+  }
+}
+
+// .contact section styles
+.contact {
+  background-color: $secondary;
+  h2,
+  p,
+  fieldset,
+  button {
+    margin: 1rem;
+  }
+  fieldset {
+    border: none;
+    input[type=text],
+    textarea {
+      font-size: 1rem;
+      padding: .5rem;
+      width: 80%;
+    }
+    textarea {
+      height: 10rem;
+    }
+    button {
+      color: $quaternary;
+      border: 2px solid $white ;
+      padding: 1rem 2rem;
+      &:hover,
+      &:focus {
+        background-color: $tertiary;
+      }
+    }
+  }
+}

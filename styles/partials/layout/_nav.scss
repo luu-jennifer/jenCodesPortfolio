@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+nav {
+  background-color: $primary;
+  border: .5px solid $white;
+  padding: 2rem 0;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  .navigation {
+    padding-left: 75vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    li {
+      padding: .5rem;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@use "../utilities/variables" as *;
+
+.wrapper {
+  max-width: 1728px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $quaternary;
+  &:hover,
+  &:focus {
+    color: $white;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
