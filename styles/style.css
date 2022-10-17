@@ -323,7 +323,7 @@ header .flexContainer {
   align-items: center;
 }
 header .flexContainer .imgContainer {
-  padding: 2rem;
+  padding-top: 2rem;
   max-width: 25vw;
 }
 header .flexContainer .imgContainer img {
@@ -340,6 +340,10 @@ header .flexContainer .socialMediaContainer ul {
 }
 header .flexContainer .socialMediaContainer ul li {
   padding: 1rem;
+}
+header .flexContainer .socialMediaContainer ul li a:hover, header .flexContainer .socialMediaContainer ul li a:focus {
+  background-color: #F7B4D8;
+  border: 0.25rem solid #F7B4D8;
 }
 header .flexContainer .launchScrollContainer {
   position: absolute;
