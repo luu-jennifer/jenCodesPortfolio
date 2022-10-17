@@ -27,7 +27,7 @@
 
   <!-- nav ends -->
 
-  <header>
+  <header id="home">
     <div class="flexContainer wrapper">
       <div class="contentContainer">
         <h1>
@@ -38,23 +38,128 @@
       </div> <!--contentContainer end-->
       <div class="heroImg">
         <div class="imgContainer">
-          <img src="assets/profilePic.jpeg" alt="Female with black hair in red shirt.">
+          <img src="assets/profilePic.jpeg" alt="Female with black hair in red shirt." />
         </div> <!--imgContainer ends-->
       </div> <!--heroImg ends-->
+      <div class="goScrollContainer">
+        <div class="scrollDownArrow">Go => </div> <!--scrollDownArrow ends-->
+      </div> <!--goScrollContainer ends-->
     </div> <!--flexContainer wrapper ends-->
   </header>
 
   <!-- sections start -->
-  <section>
-    
-  </section>
+  <section id="about">
+    <div class="flexContainer wrapper">
+      <div class="contentContainer">
+        <h2>Hello, I'm Jennifer (aka Jen).</h2>
+        <p>A web developer, experienced tech manager and sales director. I recently graduated from <a href="http://junocollege.com" target="_blank" rel="noopener noreferrer">Juno College of Technology</a>. I have a background in financial services, distribution sales, management and a Bachelor of Science from the University of Windsor.</p>
+        <p>Outside of coding, you can find me on the slopes skiing/snowboarding (Whistler Blackcomb), on the water kitesurfing (Squamish) / sailing (Sail Canada Cruising), on a rock wall climbing (multi-pitch, sport or trad) or on a yoga mat (YTT200). My personal interests include finance and blockchain (Eth).</p>
+      </div>
+    </div> <!--flexContainer wrapper ends-->
+  </section> <!--about section ends-->
+
+  <section id="skills">
+    <div class="flexContainer wrapper">
+      <div class="contentContainer">
+        <h2>My Skills</h2>
+      </div> <!--contentContainer ends-->
+      <div class="iconContainer">
+        <ul>
+          <li>html</li>
+          <li>css</li>
+          <li>sass</li>
+          <li>javascript</li>
+          <li>jQuery</li>
+          <li>React</li>
+          <li>Firebase</li>
+          <li>Accessibility</li>
+          <li>Github</li>
+        </ul>
+      </div>
+    </div> <!--flexContainer wrapper ends -->
+  </section><!--skills section ends-->
+
+  <section id="projects">
+    <div class="flexContainer wrapper">
+      <div class="contentContainer">
+        <h2>My Projects</h2>
+      </div><!--contentContainer ends-->
+      <div class="projectContainer">
+        <ul>
+          <li>
+            <img src="https://placeimg.com/250/250/tech" alt="">
+              <a href="https://zelda-app.netlify.app/">live</a>
+              <a href="https://github.com/hyruleWorld/zeldaApp">repo</a>
+            </img>
+          </li>
+          <li>
+            <img src="https://placeimg.com/150/150/animals" alt="">
+              <a href="https://luu-jennifer.github.io/beachStays/">live</a>
+              <a href="https://github.com/luu-jennifer/beachStays">repo</a>
+            </img>
+          </li>
+          <li>
+            <img src="https://placeimg.com/150/250/animals" alt="">
+              <a href="https://luu-jennifer.github.io/oneMagazine/">live</a>
+              <a href="https://github.com/luu-jennifer/oneMagazine">repo</a>
+            </img>
+          </li>
+        </ul>
+      </div><!--projectContainer ends-->
+    </div><!--flexContainer wrapper ends -->
+  </section><!--projects section ends-->
+
+  <section id="contact">
+    <div class="flexContainer wrapper">
+      <div class="contentContainer">
+        <h2>Get in touch</h2>
+        <p>If you'd like to connect, you can find me online or send me a quick message!</p>
+      </div><!--contentContainer ends-->
+      <div class="contactFormContainer">
+        <form action="">
+          <fieldset>
+            <label for="full-name">Full Name</label>
+              <p>
+                <input type="text" name="name" id="full-name">
+              </p>
+              <label for="email">Email</label>
+              <p>
+                <input type="text" name="email" id="email">
+              </p>
+              <label for="message">Message</label>
+              <p>
+                <input type="text" name="message" id="message" aria-label="message">
+              </p>
+              <button type="submit">send</button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="contactInfoContainer">
+        <ul>
+          <li>email hello@jenCodes.com</li>
+          <li>website www.jenCodes.com</li>
+        </ul>
+      </div><!--contactInfoContainer ends-->
+      <div class="socialMediaContainer">
+        <ul>
+          <li><a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">github</a></li>
+          <li><a href="https://www.linkedin.com/in/jencodes/" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+          <li><a href="https://twitter.com/jencodes" target="_blank" rel="noopener noreferrer">twitter</a></li>
+        </ul>
+      </div><!--socialMediaContainer ends-->
+    </div><!--flexContainer wrapper ends -->
+  </section><!--contact section ends-->
+
+
   <!-- sections end -->
 
   <footer>
     <p>
-      Developed by <a href="https://github.com/luu-jennifer" target="_blank">Jennifer Luu</a>
+      Developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jennifer Luu</a>
     </p>
   </footer>
+
+  <!-- javascript linked -->
   <script src="app.js"></script>
 </body>
 </html>
