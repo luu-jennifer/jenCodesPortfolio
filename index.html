@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jennifer Luu | Web Developer</title>
   <!-- link stylesheet -->
-  <link rel="stylesheet" href="./styles/style.css">
+  <link rel="stylesheet" href="./styles/style.css">  
 </head>
 <body>
   <!-- nav starts -->
@@ -46,9 +46,10 @@
       </div> <!--goScrollContainer ends-->
     </div> <!--flexContainer wrapper ends-->
   </header>
+  <main>
 
   <!-- sections start -->
-  <section id="about">
+  <section class="about" id="about">
     <div class="flexContainer wrapper">
       <div class="contentContainer">
         <h2>Hello, I'm Jennifer (aka Jen).</h2>
@@ -58,7 +59,7 @@
     </div> <!--flexContainer wrapper ends-->
   </section> <!--about section ends-->
 
-  <section id="skills">
+  <section class="skills" id="skills">
     <div class="flexContainer wrapper">
       <div class="contentContainer">
         <h2>My Skills</h2>
@@ -79,10 +80,10 @@
     </div> <!--flexContainer wrapper ends -->
   </section><!--skills section ends-->
 
-  <section id="projects">
+  <section class="projects" id="projects">
     <div class="flexContainer wrapper">
       <div class="contentContainer">
-        <h2>My Projects</h2>
+        <h2>My Projects</h2>       
       </div><!--contentContainer ends-->
       <div class="projectContainer">
         <ul>
@@ -109,57 +110,58 @@
     </div><!--flexContainer wrapper ends -->
   </section><!--projects section ends-->
 
-  <section id="contact">
+  <section class="contact" id="contact">
     <div class="flexContainer wrapper">
-      <div class="contentContainer">
-        <h2>Get in touch</h2>
-        <p>If you'd like to connect, you can find me online or send me a quick message!</p>
-      </div><!--contentContainer ends-->
-      <div class="contactFormContainer">
-        <form action="">
-          <fieldset>
-            <label for="full-name">Full Name</label>
-              <p>
-                <input type="text" name="name" id="full-name">
-              </p>
-              <label for="email">Email</label>
-              <p>
-                <input type="text" name="email" id="email">
-              </p>
-              <label for="message">Message</label>
-              <p>
-                <input type="text" name="message" id="message" aria-label="message">
-              </p>
-              <button type="submit">send</button>
-          </fieldset>
-        </form>
-      </div>
-      <div class="contactInfoContainer">
-        <ul>
-          <li>email hello@jenCodes.com</li>
-          <li>website www.jenCodes.com</li>
-        </ul>
-      </div><!--contactInfoContainer ends-->
-      <div class="socialMediaContainer">
-        <ul>
-          <li><a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">github</a></li>
-          <li><a href="https://www.linkedin.com/in/jencodes/" target="_blank" rel="noopener noreferrer">linkedin</a></li>
-          <li><a href="https://twitter.com/jencodes" target="_blank" rel="noopener noreferrer">twitter</a></li>
-        </ul>
-      </div><!--socialMediaContainer ends-->
+    <div class="contentContainer">
+      <h2>Get in touch</h2>
+      <p>If you'd like to connect, you can find me online or send me a quick message!</p>
+    </div><!--contentContainer ends-->
+    <div class="contactFormContainer">
+      <form action="">
+        <fieldset>
+          <label for="full-name">Full Name</label>
+          <p>
+            <input type="text" name="name" id="full-name">
+          </p>
+          <label for="email">Email</label>
+          <p>
+            <input type="text" name="email" id="email">
+          </p>
+          <label for="message">Message</label>
+          <p>
+            <input type="text" name="message" id="message" aria-label="message">
+          </p>
+          <button type="submit">send</button>
+        </fieldset>
+      </form>
+    </div>
+    <div class="contactInfoContainer">
+      <ul>
+        <li>email hello@jenCodes.com</li>
+        <li>website www.jenCodes.com</li>
+      </ul>
+    </div><!--contactInfoContainer ends-->
+    <div class="socialMediaContainer">
+      <ul>
+        <li><a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">github</a></li>
+        <li><a href="https://www.linkedin.com/in/jencodes/" target="_blank" rel="noopener noreferrer">linkedin</a></li>
+        <li><a href="https://twitter.com/jencodes" target="_blank" rel="noopener noreferrer">twitter</a></li>
+      </ul>
+    </div><!--socialMediaContainer ends-->
     </div><!--flexContainer wrapper ends -->
   </section><!--contact section ends-->
+</main>
 
 
-  <!-- sections end -->
+<!-- sections end -->
 
-  <footer>
-    <p>
-      Developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jennifer Luu</a>
-    </p>
-  </footer>
+<footer>
+  <p>
+    Developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jennifer Luu</a>
+  </p>
+</footer>
 
-  <!-- javascript linked -->
-  <script src="app.js"></script>
+<!-- javascript linked -->
+<script src="app.js"></script>
 </body>
 </html>

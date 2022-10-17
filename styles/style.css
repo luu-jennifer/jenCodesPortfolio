@@ -216,3 +216,31 @@ template {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+nav {
+  background-color: #88C1CF;
+}
+
+header {
+  background-color: #88C1CF;
+}
+
+.about {
+  background-color: #BBACD8;
+}
+
+.skills {
+  background-color: #F7B4D8;
+}
+
+.projects {
+  background-color: #88C1CF;
+}
+
+.contact {
+  background-color: #BBACD8;
+}
+
+footer {
+  background-color: #F7B4D8;
+}

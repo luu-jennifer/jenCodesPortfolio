@@ -1,0 +1,21 @@
+@use "./variables" as *;
+
+// .about section styles
+.about {
+  background-color: $secondary;
+}
+
+// .skills section styles
+.skills {
+  background-color: $tertiary;
+}
+
+// .projects section styles 
+.projects {
+  background-color: $primary;
+}
+
+// .contact section styles
+.contact {
+  background-color: $secondary;
+}
