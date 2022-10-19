@@ -358,7 +358,7 @@ header {
   text-align: center;
   padding: 6rem 0 1rem 0;
 }
-header h1 {
+header .contentContainer h1 {
   margin: 3.5rem auto 2rem auto;
 }
 header .flexContainer {
