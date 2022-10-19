@@ -2,8 +2,12 @@
 
 header {
   background-color: $primary;
+  min-height: 90vh;
   text-align: center;
-  padding: 10rem 0 1rem 0;
+  padding: 6rem 0 1rem 0;
+    h1 {
+      margin: 3.5rem auto 2rem auto;
+    }
   .flexContainer {
     display: flex;
     flex-direction: column;
@@ -13,6 +17,7 @@ header {
       max-width: 25vw;
         img {
             border-radius: 50%;
+            border: 2px solid $tertiary;
           }
     }
     .socialMediaContainer {
@@ -34,10 +39,75 @@ header {
         }
       }
     }
-    .launchScrollContainer {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+
+// animations
+    position: relative;
+    @keyframes jump {
+      50% {
+        transform: translateY(100%);
+      }
     }
+
+    @keyframes swing {
+      50% {
+        transform: translateX(100%);
+      }
+    }
+  
+    .launchContainer {
+      animation-name: jump;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      // margin: 0 0 0 90;
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 20%;
+    }
+    .coffeeContainer {
+      animation-name: swing;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      transform: rotate(15deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 15% 0 0 10%;
+    }
+
+  }
+}
+
+//typing effect
+.typing h1 {
+  color: #fff;
+  overflow: hidden;
+  border-right: .15em solid $tertiary;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: $tertiary
   }
 }

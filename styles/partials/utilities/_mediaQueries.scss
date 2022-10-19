@@ -1,1 +1,31 @@
 @use "./variables" as *;
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .typing h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .typing h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .typing h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .typing h1 {
+    font-size: 1.25rem;
+  }
+}

@@ -19,15 +19,21 @@
   background-color: $tertiary;
   .iconContainer {
     margin: 5rem auto 1rem auto;
-    max-width: 50%;
+    max-width: 60%;
     ul {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
       flex-wrap: wrap;
+      align-items: baseline;
+      text-align: center;
       li {
         margin: 0 auto;
-        padding: 1rem;
+        margin: 3rem;
+        width: 5vw;
+        img {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -41,14 +47,26 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
   }
   li {
-    max-width: 20vw;
+    margin: 1rem;
+    max-width: 35vw;
     text-align: center;
+    
+    
     img {
       border-radius: 10%;
+      width: 100%;
       border: 1px solid black;
       margin: 1rem;
+      // focus animation  
+      transition: .2s ease;
+      &:hover,
+      &:focus {
+          box-shadow: .2rem .2rem $tertiary;
+          transform: scale(1.25);
+        }
     }
     a {
       padding: .5rem 1rem;
@@ -58,11 +76,22 @@
       margin: 2rem 1rem;
       &:hover,
       &:focus {
-        background-color: $tertiary;
+        background-color: $secondary;
       }
     }
   }
 }
+
+// // animation effect
+// .projectSnap {
+//   transition: .2s ease;
+//   &:hover,
+//   &:focus {
+//     transform: scale(0.95);
+//   }
+// }
+
+
 
 // .contact section styles
 .contact {
@@ -85,9 +114,9 @@
       height: 10rem;
     }
     button {
-      color: $quaternary;
       border: 2px solid $white ;
       padding: 1rem 2rem;
+      border-radius: 10%;
       &:hover,
       &:focus {
         background-color: $tertiary;

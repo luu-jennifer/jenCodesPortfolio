@@ -230,19 +230,27 @@ body {
 }
 
 h1 {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 5.56rem;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4.4rem;
   font-weight: bold;
-  color: #F2F0F0;
+  color: #FFF;
   line-height: 5rem;
 }
 
 h2 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 4.35rem;
-  line-height: 2.9rem;
+  line-height: 4rem;
   color: #000;
   letter-spacing: 0.45rem;
+}
+
+h3 {
+  font-family: fantasy;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000;
+  line-height: 5rem;
 }
 
 ul,
@@ -279,7 +287,8 @@ a {
   color: #098CE5;
 }
 a:hover, a:focus {
-  color: #F2F0F0;
+  color: rgb(232, 10, 121);
+  transition: 0.5s;
 }
 
 img {
@@ -290,37 +299,73 @@ button {
   border: none;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
+  background-color: #88C1CF;
+}
+button:hover, button:focus {
+  transition: 0.5s;
 }
 
-nav {
-  background-color: #88C1CF;
-  border: 0.5px solid #F2F0F0;
-  padding: 2rem 0;
+.navBar {
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
-  display: flex;
-  width: 100vw;
-  position: fixed;
+  z-index: 10;
+  background-color: #88C1CF;
+  border-bottom: 1px solid #084b6d;
 }
-nav .navigation {
-  padding-left: 75vh;
+.navBar .wrapper {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap;
+  padding: 20px 0;
 }
-nav .navigation li {
-  padding: 0.5rem;
+.navBar .wrapper .logo h2:hover, .navBar .wrapper .logo h2:focus {
+  color: rgb(232, 10, 121);
+  transition: 0.5s;
+}
+
+.slideOutNav {
+  padding: 35px 50px;
+  border-right: 2px solid #084b6d;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: #88C1CF;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 20;
+  transition: 0.75s;
+}
+.slideOutNav .buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.slideOutNav .buttonContainer button {
+  padding: 10px 0 10px 20px;
+}
+.slideOutNav .mainMenu a {
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  padding: 1rem;
 }
 
 header {
   background-color: #88C1CF;
+  min-height: 90vh;
   text-align: center;
-  padding: 10rem 0 1rem 0;
+  padding: 6rem 0 1rem 0;
+}
+header h1 {
+  margin: 3.5rem auto 2rem auto;
 }
 header .flexContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 header .flexContainer .imgContainer {
   padding-top: 2rem;
@@ -328,6 +373,7 @@ header .flexContainer .imgContainer {
 }
 header .flexContainer .imgContainer img {
   border-radius: 50%;
+  border: 2px solid rgb(232, 10, 121);
 }
 header .flexContainer .socialMediaContainer {
   width: 33%;
@@ -342,15 +388,99 @@ header .flexContainer .socialMediaContainer ul li {
   padding: 1rem;
 }
 header .flexContainer .socialMediaContainer ul li a:hover, header .flexContainer .socialMediaContainer ul li a:focus {
-  background-color: #F7B4D8;
-  border: 0.25rem solid #F7B4D8;
+  background-color: rgb(232, 10, 121);
+  border: 0.25rem solid rgb(232, 10, 121);
 }
-header .flexContainer .launchScrollContainer {
+@-webkit-keyframes jump {
+  50% {
+    transform: translateY(100%);
+  }
+}
+@keyframes jump {
+  50% {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes swing {
+  50% {
+    transform: translateX(100%);
+  }
+}
+@keyframes swing {
+  50% {
+    transform: translateX(100%);
+  }
+}
+header .flexContainer .launchContainer {
+  -webkit-animation-name: jump;
+          animation-name: jump;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
+  margin-top: 20%;
+}
+header .flexContainer .coffeeContainer {
+  -webkit-animation-name: swing;
+          animation-name: swing;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform: rotate(15deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15% 0 0 10%;
 }
 
+.typing h1 {
+  color: #fff;
+  overflow: hidden;
+  border-right: 0.15em solid rgb(232, 10, 121);
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(232, 10, 121);
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(232, 10, 121);
+  }
+}
 .about,
 .skills,
 .projects,
@@ -363,21 +493,27 @@ header .flexContainer .launchScrollContainer {
 }
 
 .skills {
-  background-color: #F7B4D8;
+  background-color: rgb(232, 10, 121);
 }
 .skills .iconContainer {
   margin: 5rem auto 1rem auto;
-  max-width: 50%;
+  max-width: 60%;
 }
 .skills .iconContainer ul {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: baseline;
+  text-align: center;
 }
 .skills .iconContainer ul li {
   margin: 0 auto;
-  padding: 1rem;
+  margin: 3rem;
+  width: 5vw;
+}
+.skills .iconContainer ul li img {
+  max-width: 100%;
 }
 
 .projects ul {
@@ -386,25 +522,33 @@ header .flexContainer .launchScrollContainer {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
 }
 .projects li {
-  max-width: 20vw;
+  margin: 1rem;
+  max-width: 35vw;
   text-align: center;
 }
 .projects li img {
   border-radius: 10%;
+  width: 100%;
   border: 1px solid black;
   margin: 1rem;
+  transition: 0.2s ease;
+}
+.projects li img:hover, .projects li img:focus {
+  box-shadow: 0.2rem 0.2rem rgb(232, 10, 121);
+  transform: scale(1.25);
 }
 .projects li a {
   padding: 0.5rem 1rem;
-  background-color: #F2F0F0;
+  background-color: #FFF;
   border: 2px solid #BBACD8;
   border-radius: 10%;
   margin: 2rem 1rem;
 }
 .projects li a:hover, .projects li a:focus {
-  background-color: #F7B4D8;
+  background-color: #BBACD8;
 }
 
 .contact {
@@ -429,18 +573,44 @@ header .flexContainer .launchScrollContainer {
   height: 10rem;
 }
 .contact fieldset button {
-  color: #098CE5;
-  border: 2px solid #F2F0F0;
+  border: 2px solid #FFF;
   padding: 1rem 2rem;
+  border-radius: 10%;
 }
 .contact fieldset button:hover, .contact fieldset button:focus {
-  background-color: #F7B4D8;
+  background-color: rgb(232, 10, 121);
 }
 
 footer {
-  background-color: #F7B4D8;
+  background-color: #FFF;
 }
 footer p {
   text-align: center;
   padding: 0.5rem 0;
+}
+
+@media (max-width: 1700px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media (max-width: 1500px) {
+  .typing h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .typing h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 700px) {
+  .typing h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 500px) {
+  .typing h1 {
+    font-size: 1.25rem;
+  }
 }
