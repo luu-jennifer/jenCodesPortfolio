@@ -10,30 +10,44 @@
 </head>
 <body>
   <!-- nav starts -->
-  <nav>
-    <div class="flexContainer wrapper">
-      <ul class="navigation">
+  <nav class="navBar">
+    <div class="wrapper">
+      <button class="menuIcon" id="menuButton">
+        <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
+      </button>
+      <a href="#home" class="logo">
+        <h2>jen luu</h2>
+      </a>
+    </div> <!-- .wrapper END -->
+  </nav> <!-- .navBar END -->
+    
+  <!-- slideOutNav START -->
+  <div class="slideOutNav" id="slideOutNav">
+    <div class="buttonContainer">
+      <button id="menuClose">
+        <img src="./assets/menu-close.svg" alt="close navigation">
+      </button>
+    </div>
+    <nav>
+      <ul class="mainMenu">
         <li><a href="#home">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#skills">skills</a></li>
         <li><a href="#projects">projects</a></li>
         <li><a href="#contact">contact</a></li>
       </ul>
-    </div> <!--flexContainer wrapper ends-->
-  </nav>
-  <!-- hamburger for mobile -->
-
-
-
+    </nav>
+  </div>
+  <!-- slideOutNav close -->
+  
   <!-- nav ends -->
-
+  
   <header id="home">
     <div class="flexContainer wrapper">
-      <div class="contentContainer">
+      <div class="contentContainer typing">
         <h1>
           Coffee. Code. Adventure.
         </h1>
-        <p>work in progress...</p>
       </div> <!--contentContainer end-->
       <div class="heroImg">
         <div class="imgContainer">
@@ -47,40 +61,44 @@
           <li><a href="https://twitter.com/jencodes" target="_blank" rel="noopener noreferrer"><img src="./assets/twitter.png" alt="Twitter logo" /></a></li>
         </ul>
       </div>      <!--socialMediaContainer ends-->
-      <div class="launchScrollContainer">
-        <img src="./assets/rocket.png" alt="red rocket cartoon">
-      </div> <!--goScrollContainer ends-->
+      <!-- rocket animation -->
+      <div class="launchContainer">
+          <img src="./assets/rocket.png" alt="red rocket cartoon">
+      </div> <!--launchContainer ends-->
+      <div class="coffeeContainer">
+        <h2>☕️</h2>
+      </div><!--coffeeContainer ends-->
     </div> <!--flexContainer wrapper ends-->
   </header>
   <main>
-
-  <!-- sections start -->
-  <section class="about" id="about">
-    <div class="flexContainer wrapper">
-      <div class="contentContainer">
-        <h2>Hello, I'm Jennifer (aka Jen).</h2>
-        <p>A web developer, experienced tech manager and sales director. I recently graduated from <a href="http://junocollege.com" target="_blank" rel="noopener noreferrer">Juno College of Technology</a>. I have a background in financial services, distribution sales, management and a Bachelor of Science from the University of Windsor.</p>
-        <p>Outside of coding, you can find me on the slopes skiing/snowboarding (Whistler Blackcomb), on the water kitesurfing (Squamish) / sailing (Sail Canada Cruising), on a rock wall climbing (multi-pitch, sport or trad) or on a yoga mat (YTT200). My personal interests include finance and blockchain (Eth).</p>
-      </div>
-    </div> <!--flexContainer wrapper ends-->
-  </section> <!--about section ends-->
-
-  <section class="skills" id="skills">
-    <div class="flexContainer wrapper">
-      <div class="contentContainer">
-        <h2>My Skills</h2>
-      </div> <!--contentContainer ends-->
-      <div class="iconContainer">
-        <ul>
-          <li>html</li>
-          <li>css</li>
-          <li>sass</li>
-          <li>javascript</li>
-          <li>jQuery</li>
-          <li>React</li>
-          <li>Firebase</li>
-          <li>Accessibility</li>
-          <li>Github</li>
+    
+    <!-- sections start -->
+    <section class="about" id="about">
+      <div class="flexContainer wrapper">
+        <div class="contentContainer">
+          <h2>Hello, I'm Jennifer (aka Jen).</h2>
+          <p>A web developer👩🏻‍💻, experienced tech manager and sales director. I recently graduated from <a href="http://junocollege.com" target="_blank" rel="noopener noreferrer">Juno College of Technology</a>. I have a background in financial services, distribution sales, management and a Bachelor of Science from the University of Windsor.</p>
+          <p>Outside of coding, you can find me on the slopes skiing🎿/snowboarding🏂 (Whistler Blackcomb), on the water kitesurfing🏄🏻‍♀️ (Squamish) / sailing⛵️ (Sail Canada Cruising), on a rock wall climbing🧗🏻‍♀️ (multi-pitch, sport or trad) or on a yoga mat🧘🏻‍♀️ (YTT200). My personal interests include finance and blockchain (Eth).</p>
+        </div>
+      </div> <!--flexContainer wrapper ends-->
+    </section> <!--about section ends-->
+    
+    <section class="skills" id="skills">
+      <div class="flexContainer wrapper">
+        <div class="contentContainer">
+          <h2>My Skills</h2>
+        </div> <!--contentContainer ends-->
+        <div class="iconContainer">
+          <ul>
+            <li><img src="./assets/html5.svg" alt="html logo">html</li>
+            <li><img src="./assets/css3-alt.svg" alt="css logo">css</li>
+            <li><img src="./assets/sass.svg" alt="sass logo">sass</li>
+            <li><img src="./assets/js.svg" alt="javascript logo">javascript</li>
+          <li><img src="./assets/react.svg" alt="react logo">react</li>
+          <!-- <li>Firebase</li> -->
+          <!-- <li>Accessibility</li> -->
+          <li><img src="./assets/git.svg" alt="git logo"> git</li>
+          <li><img src="./assets/github.svg" alt="GitHub"> GitHub</li>
         </ul>
       </div>
     </div> <!--flexContainer wrapper ends -->
@@ -94,19 +112,22 @@
       <div class="projectContainer">
         <ul>
           <li>
-            <img src="https://zelda-app.netlify.app/assets/startGame.gif" alt="zelda game" />
-              <a href="https://zelda-app.netlify.app/" target="_blank">live</a>
-              <a href="https://github.com/hyruleWorld/zeldaApp" target="_blank">repo</a>
+            <img src="./assets/zeldaApp.png" alt="zelda game" />
+            <h4>| html | css | sass | js | restAPI | git/GitHub | paired-programming |</h4>
+            <a href="https://zelda-app.netlify.app/" target="_blank">live</a>
+            <a href="https://github.com/hyruleWorld/zeldaApp" target="_blank">repo</a>
           </li>
           <li>
-            <img src="https://luu-jennifer.github.io/beachStays/assets/header-box.jpg" alt="beach stay holidays" />
-              <a href="https://luu-jennifer.github.io/beachStays/" target="_blank">live</a>
-              <a href="https://github.com/luu-jennifer/beachStays" target="_blank">repo</a>
+            <img src="./assets/beachStays.png" alt="beach stay holidays" />
+            <h4>| multi-page PSD conversion | html | css | js | git/GitHub |</h4>
+            <a href="https://luu-jennifer.github.io/beachStays/" target="_blank">live</a>
+            <a href="https://github.com/luu-jennifer/beachStays" target="_blank">repo</a>
           </li>
           <li>
-            <img src="https://luu-jennifer.github.io/oneMagazine/images/image-7.jpg" alt="fashion magazine" />
-              <a href="https://luu-jennifer.github.io/oneMagazine/" target="_blank">live</a>
-              <a href="https://github.com/luu-jennifer/oneMagazine" target="_blank">repo</a>
+            <img src="./assets/oneMag.png" alt="fashion magazine" />
+            <h4>| PSD conversion | html | css | git/GitHub | responsive web design |</h4>
+            <a href="https://luu-jennifer.github.io/oneMagazine/" target="_blank">live</a>
+            <a href="https://github.com/luu-jennifer/oneMagazine" target="_blank">repo</a>
           </li>
         </ul>
       </div><!--projectContainer ends-->
@@ -143,7 +164,7 @@
 <!-- sections end -->
 
 <footer>
-  <p>jenCodes.com was developed by Jennifer Luu // hello@jenCode.com</p>
+  <p>jenCodes.com was developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jen Luu</a> @ Juno College of Technology</p>
 </footer>
 
 <!-- javascript linked -->

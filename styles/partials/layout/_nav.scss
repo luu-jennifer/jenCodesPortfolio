@@ -1,21 +1,53 @@
 @use "../utilities/variables" as *;
 
-nav {
-  background-color: $primary;
-  border: .5px solid $white;
-  padding: 2rem 0;
+.navBar {
+  position: sticky;
   top: 0;
-  display: flex;
-  width: 100vw;
-  position: fixed;
-  .navigation {
-    padding-left: 75vh;
+  z-index: 10;
+  background-color: $primary;
+  border-bottom: 1px solid $quinary;
+
+  .wrapper {
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-    li {
-      padding: .5rem;
+    padding: 20px 0;
+    .logo h2 {
+      &:hover,
+      &:focus {
+        color: $tertiary;
+        transition: .5s;
+      }
     }
+  }
+}
+
+.slideOutNav {
+  padding: 35px 50px;
+  border-right: 2px solid $quinary;
+  width: 100%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: $primary;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: -300px; //Hides slide out Nav. onclick left: 0px
+  z-index: 20;
+  transition: 0.75s;
+
+  .buttonContainer {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      padding: 10px 0 10px 20px;
+    }
+  }
+
+  .mainMenu a {
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    padding: 1rem
   }
 }
