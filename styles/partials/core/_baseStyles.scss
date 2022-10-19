@@ -14,7 +14,8 @@ a {
   color: $quaternary;
   &:hover,
   &:focus {
-    color: $white;
+    color: $tertiary;
+    transition: .5s;
   }
 }
 
@@ -26,4 +27,9 @@ button {
   border: none;
   font-family: 'Courier New', Courier, monospace;
   font-weight: bold;
+  background-color: $primary;
+    &:hover,
+    &:focus {
+      transition: .5s;
+    }
 }

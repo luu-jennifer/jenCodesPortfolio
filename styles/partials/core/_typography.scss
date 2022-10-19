@@ -19,8 +19,8 @@ body {
 // heading family
 h1 {
   //TODO: UPDATE FONT FAMILY
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 5.56rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4.4rem;
   font-weight: bold;
   color: $white;
   line-height: 5rem;
@@ -29,9 +29,17 @@ h1 {
 h2 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 4.35rem;
-  line-height: 2.9rem;
+  line-height: 4rem;
   color: $black;
   letter-spacing: 0.45rem;
+}
+
+h3 {
+  font-family: fantasy;
+  font-size: 3rem;
+  font-weight: bold;
+  color: $black;
+  line-height: 5rem;
 }
 
 ul,
