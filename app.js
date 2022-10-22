@@ -8,3 +8,4 @@ const hideSlideOutNav = () => slideOutNav.style.left = "-50vw";
 
 menuButton.addEventListener("click", showSlideOutNav);
 menuClose.addEventListener("click", hideSlideOutNav);
+window.addEventListener("mouseup", hideSlideOutNav);
