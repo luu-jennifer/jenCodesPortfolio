@@ -7,25 +7,99 @@
 }
 
 @media (max-width: 1500px) {
-  .typing h1 {
-    font-size: 3rem;
+  header {
+    .typing h1 {
+      font-size: 3rem;
+    }
+  }
+
+}
+
+@media (max-width: 1300px) {
+  body {
+    text-align: center;
+  }
+
+  header {
+    .typing h1 {
+      font-size: 2rem;
+    }
+
+    .flexContainer {
+      .coffeeContainer {
+        margin: 50% 20% 0 0;
+      }
+    }
+  }
+
+.slideOutNav {
+  .mainMenu a {
+    font-size: 1rem;
+  }
+
+  .socialContactContainer {
+    ul {
+      flex-direction: column;
+    }
   }
 }
 
-@media (max-width: 1000px) {
-  .typing h1 {
-    font-size: 2rem;
+  .projects {
+    ul {
+      flex-direction: column;
+      li {
+        max-width: 80vw;
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
-@media (max-width: 700px) {
-  .typing h1 {
-    font-size: 1.5rem;
+@media (max-width: 960px) {
+  header {
+    .typing h1 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  .skills {
+    .iconContainer {
+      margin: 0;
+      max-width: 100%;
+
+      ul li {
+        width: 30%;
+        margin: 10% auto;
+        padding: 0 1rem;
+      }
+    }
   }
 }
 
-@media (max-width: 500px) {
-  .typing h1 {
-    font-size: 1.25rem;
+@media (max-width: 650px) {
+  header {
+    .typing h1 {
+      font-size: 1rem;
+    }
+    .flexContainer {
+      .coffeeContainer {
+        margin: 120px 0 0 -60px;
+      }
+      .imgContainer {
+        max-width: 50vw;
+      }
+      .socialMediaContainer {
+        width: 50%;
+      }
+    }
   }
+  .navBar .wrapper {
+    .logo h2 {
+      margin: 0 auto;
+    }
+  }
+
 }

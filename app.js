@@ -4,7 +4,7 @@ const slideOutNav = document.getElementById("slideOutNav");
 const menuClose = document.getElementById("menuClose");
 
 const showSlideOutNav = () => slideOutNav.style.left = "0px";
-const hideSlideOutNav = () => slideOutNav.style.left = "-300px";
+const hideSlideOutNav = () => slideOutNav.style.left = "-50vw";
 
 menuButton.addEventListener("click", showSlideOutNav);
 menuClose.addEventListener("click", hideSlideOutNav);

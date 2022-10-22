@@ -6,6 +6,7 @@ header {
   text-align: center;
   padding: 6rem 0 1rem 0;
   .contentContainer {
+    margin: 1rem;
     h1 {
       margin: 3.5rem auto 2rem auto;
     }
@@ -31,6 +32,7 @@ header {
         justify-content: space-evenly;
         li {
           padding: 1rem;
+          width: 4rem;
           a {
             &:hover,
             &:focus {
@@ -44,30 +46,30 @@ header {
 
 // animations
     position: relative;
-    @keyframes jump {
-      50% {
+    @keyframes launch {
+      100% {
         transform: translateY(100%);
       }
     }
 
-    @keyframes swing {
+    @keyframes serve {
       50% {
         transform: translateX(100%);
       }
     }
   
     .launchContainer {
-      animation-name: jump;
-      animation-duration: 5s;
+      animation-name: launch;
+      animation-duration: 2.5s;
       animation-iteration-count: infinite;
-      // margin: 0 0 0 90;
       position: absolute;
       top: 0;
       right: 0;
-      margin-top: 20%;
+      margin-top: 10%;
+      height: 75vh;
     }
     .coffeeContainer {
-      animation-name: swing;
+      animation-name: serve;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       transform: rotate(15deg);
@@ -76,13 +78,10 @@ header {
       left: 0;
       margin: 15% 0 0 10%;
     }
-
   }
 }
 
-//typing effect
 .typing h1 {
-  color: #fff;
   overflow: hidden;
   border-right: .15em solid $tertiary;
   white-space: nowrap;
@@ -90,8 +89,9 @@ header {
   letter-spacing: .15em;
   animation:
     typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+    blinking-cursor .5s step-end infinite;
 }
+
 
 @keyframes typing {
   from {
@@ -102,7 +102,7 @@ header {
     width: 100%
   }
 }
-@keyframes blink-caret {
+@keyframes blinking-cursor {
 
   from,
   to {
