@@ -47,32 +47,31 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: baseline;
   }
   li {
     margin: 1rem;
     max-width: 35vw;
     text-align: center;
-    
-    
+    margin: 0 auto;
     img {
-      border-radius: 10%;
-      width: 100%;
+      border-radius: 30px;
+      width: 500px;
       border: 1px solid black;
-      margin: 1rem;
+      margin: 5rem auto;
       // focus animation  
       transition: .2s ease;
       &:hover,
       &:focus {
           box-shadow: .2rem .2rem $tertiary;
-          transform: scale(1.25);
+          transform: scale(1.4);
         }
     }
     a {
       padding: .5rem 1rem;
       background-color: $white;
       border: 2px solid $secondary;
-      border-radius: 10%;
+      border-radius: 30px;
       margin: 2rem 1rem;
       &:hover,
       &:focus {
@@ -82,41 +81,42 @@
   }
 }
 
-// // animation effect
-// .projectSnap {
-//   transition: .2s ease;
-//   &:hover,
-//   &:focus {
-//     transform: scale(0.95);
-//   }
-// }
-
-
 
 // .contact section styles
 .contact {
   background-color: $secondary;
   h2,
   p,
-  fieldset,
-  button {
-    margin: 1rem;
+  fieldset {
+    padding: 1rem;
+  }
+  form {
+    margin: 0 auto;
+    background: $white;
+    padding: 1rem 2rem;
+    width: 90%;
+    max-width: 80vw;
+    border-radius: 5%;
+    input,
+    textarea {
+      border: 0;
+      margin: .75rem 0;
+      outline: none;
+      border-radius: 30px;
+      padding: 1rem;
+      resize: none;
+    }
   }
   fieldset {
+    display: flex;
+    flex-direction: column;
     border: none;
-    input[type=text],
-    textarea {
-      font-size: 1rem;
-      padding: .5rem;
-      width: 80%;
-    }
-    textarea {
-      height: 10rem;
-    }
     button {
-      border: 2px solid $white ;
-      padding: 1rem 2rem;
-      border-radius: 10%;
+      border-radius: 30px;
+      padding: 1rem 3rem;
+      margin: 0 auto;
+      border: 1px solid $secondary;
+      cursor: pointer;
       &:hover,
       &:focus {
         background-color: $tertiary;

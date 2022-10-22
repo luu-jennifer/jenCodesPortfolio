@@ -12,12 +12,12 @@
   <!-- nav starts -->
   <nav class="navBar">
     <div class="wrapper">
-      <button class="menuIcon" id="menuButton">
-        <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
-      </button>
       <a href="#home" class="logo">
         <h2>jen luu</h2>
       </a>
+      <button class="menuIcon" id="menuButton">
+        <img src="./assets/menu-button.svg" alt="open slide-out navigation" class="menuIcon">
+      </button>
     </div> <!-- .wrapper END -->
   </nav> <!-- .navBar END -->
     
@@ -37,8 +37,17 @@
         <li><a href="#contact">contact</a></li>
       </ul>
     </nav>
-  </div>
-  <!-- slideOutNav close -->
+    <div class="socialContactContainer">
+      <ul>
+        <li><a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer"><img src="./assets/github.png"
+              alt="Github logo" /></a></li>
+        <li><a href="https://www.linkedin.com/in/jencodes/" target="_blank" rel="noopener noreferrer"><img
+              src="./assets/linkedIn.png" alt="Linkedin logo" /></a></li>
+        <li><a href="https://twitter.com/jencodes" target="_blank" rel="noopener noreferrer"><img src="./assets/twitter.png"
+              alt="Twitter logo" /></a></li>
+      </ul>
+    </div> <!--socialContactContainer end-->
+  </div><!-- slideOutNav close -->
   
   <!-- nav ends -->
   
@@ -113,7 +122,7 @@
         <ul>
           <li>
             <img src="./assets/zeldaApp.png" alt="zelda game" />
-            <h4>| html | css | sass | js | restAPI | git/GitHub | paired-programming |</h4>
+            <h4>| html | css | sass | js | restAPI | git/GitHub | pair-programming |</h4>
             <a href="https://zelda-app.netlify.app/" target="_blank">live</a>
             <a href="https://github.com/hyruleWorld/zeldaApp" target="_blank">repo</a>
           </li>
@@ -135,27 +144,17 @@
   </section><!--projects section ends-->
 
   <section class="contact" id="contact">
-    <div class="flexContainer wrapper">
-    <div class="contentContainer">
-      <h2>Get in touch</h2>
-      <p>If you'd like to connect, you can find me online or send me a quick message!</p>
-    </div><!--contentContainer ends-->
-    <div class="contactFormContainer">
-      <form action="">
+    <div class="wrapper">
+      <form action="https://formsubmit.co/jennifer-luu@outlook.com" method="POST">
+        <h2>Get in touch</h2>
+        <p>If you'd like to connect, you can find me online or send me a quick message!</p>
         <fieldset>
-          <p>
-            <input type="text" name="name" id="full-name" aria-label="full-name" placeholder="Full Name">
-          </p>
-          <p>
-            <input type="text" name="email" id="email" placeholder="Email" aria-label="email">
-          </p>
-          <p>
-            <textarea name="message" id="message" aria-label="message" placeholder="Type your message"></textarea>
-          </p>
-          <button type="submit">send</button>
+          <input type="text" id="name" placeholder="Your Name*" required>
+          <input type="email" id="email" placeholder="Your Email*" required>
+          <textarea id="message" rows="10" placeholder="Type your message*" required></textarea>
+          <button type="submit">send message</button>
         </fieldset>
       </form>
-    </div>
     </div><!--flexContainer wrapper ends -->
   </section><!--contact section ends-->
 </main>
@@ -164,7 +163,7 @@
 <!-- sections end -->
 
 <footer>
-  <p>jenCodes.com was developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jen Luu</a> @ Juno College of Technology</p>
+  <p>✨developed by <a href="https://github.com/luu-jennifer" target="_blank" rel="noopener noreferrer">Jen Luu</a></p>
 </footer>
 
 <!-- javascript linked -->
