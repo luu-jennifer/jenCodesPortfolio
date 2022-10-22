@@ -8,7 +8,6 @@ html {
 
 
 body {
-  //TODO: UPDATE WITH FONT VARIABLE
   font-family: 'Courier New', Courier, monospace;
   font-size: $baseFontSize;
   color: $black;
@@ -18,11 +17,10 @@ body {
 
 // heading family
 h1 {
-  //TODO: UPDATE FONT FAMILY
   font-family: 'Courier New', Courier, monospace;
   font-size: 4.4rem;
   font-weight: bold;
-  color: $white;
+  color: $solidWhite;
   line-height: 5rem;
 }
 

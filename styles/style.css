@@ -273,6 +273,11 @@ p {
   letter-spacing: 0.1rem;
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(218, 236, 242);
+}
+
 .wrapper {
   max-width: 1728px;
   width: 80%;
@@ -311,15 +316,25 @@ button:hover, button:focus {
   top: 0;
   z-index: 10;
   background-color: #88C1CF;
-  border-bottom: 1px solid #084b6d;
+  border-bottom: 0.5px solid #084b6d;
 }
 .navBar .wrapper {
   display: flex;
   justify-content: space-between;
+  flex-direction: row;
   padding: 20px 0;
+}
+.navBar .wrapper .logo h2 {
+  margin-left: 50%;
 }
 .navBar .wrapper .logo h2:hover, .navBar .wrapper .logo h2:focus {
   color: rgb(232, 10, 121);
+  transition: 0.5s;
+}
+.navBar .wrapper img:hover, .navBar .wrapper img:focus {
+  background-color: rgb(232, 10, 121);
+  border-radius: 30px;
+  padding: 0.75rem;
   transition: 0.5s;
 }
 
@@ -327,29 +342,46 @@ button:hover, button:focus {
   padding: 35px 50px;
   border-right: 2px solid #084b6d;
   width: 100%;
-  max-width: 300px;
-  height: 100vh;
+  max-width: 15vw;
+  height: 100%;
   background-color: #88C1CF;
-  color: #FFF;
+  color: rgb(218, 236, 242);
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
-  left: -300px;
+  left: -100vw;
   z-index: 20;
   transition: 0.75s;
 }
 .slideOutNav .buttonContainer {
-  display: flex;
-  justify-content: flex-end;
-}
-.slideOutNav .buttonContainer button {
-  padding: 10px 0 10px 20px;
+  right: 0;
+  position: absolute;
+  margin-bottom: 400px;
+  margin-right: 10px;
 }
 .slideOutNav .mainMenu a {
   font-size: 1.6rem;
   line-height: 2.5rem;
   padding: 1rem;
+}
+.slideOutNav .socialContactContainer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.slideOutNav .socialContactContainer ul li {
+  padding: 1rem;
+  width: 3rem;
+}
+.slideOutNav img:hover, .slideOutNav img:focus {
+  background-color: rgb(232, 10, 121);
+  border-radius: 30px;
+  padding: 0.2rem;
+  transition: 0.5s;
 }
 
 header {
@@ -357,6 +389,9 @@ header {
   min-height: 90vh;
   text-align: center;
   padding: 6rem 0 1rem 0;
+}
+header .contentContainer {
+  margin: 1rem;
 }
 header .contentContainer h1 {
   margin: 3.5rem auto 2rem auto;
@@ -386,46 +421,48 @@ header .flexContainer .socialMediaContainer ul {
 }
 header .flexContainer .socialMediaContainer ul li {
   padding: 1rem;
+  width: 4rem;
 }
 header .flexContainer .socialMediaContainer ul li a:hover, header .flexContainer .socialMediaContainer ul li a:focus {
   background-color: rgb(232, 10, 121);
   border: 0.25rem solid rgb(232, 10, 121);
 }
-@-webkit-keyframes jump {
-  50% {
+@-webkit-keyframes launch {
+  100% {
     transform: translateY(100%);
   }
 }
-@keyframes jump {
-  50% {
+@keyframes launch {
+  100% {
     transform: translateY(100%);
   }
 }
-@-webkit-keyframes swing {
+@-webkit-keyframes serve {
   50% {
     transform: translateX(100%);
   }
 }
-@keyframes swing {
+@keyframes serve {
   50% {
     transform: translateX(100%);
   }
 }
 header .flexContainer .launchContainer {
-  -webkit-animation-name: jump;
-          animation-name: jump;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  -webkit-animation-name: launch;
+          animation-name: launch;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   position: absolute;
   top: 0;
   right: 0;
-  margin-top: 20%;
+  margin-top: 10%;
+  height: 75vh;
 }
 header .flexContainer .coffeeContainer {
-  -webkit-animation-name: swing;
-          animation-name: swing;
+  -webkit-animation-name: serve;
+          animation-name: serve;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
   -webkit-animation-iteration-count: infinite;
@@ -438,14 +475,13 @@ header .flexContainer .coffeeContainer {
 }
 
 .typing h1 {
-  color: #fff;
   overflow: hidden;
   border-right: 0.15em solid rgb(232, 10, 121);
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.15em;
-  -webkit-animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
-          animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+  -webkit-animation: typing 3.5s steps(30, end), blinking-cursor 0.5s step-end infinite;
+          animation: typing 3.5s steps(30, end), blinking-cursor 0.5s step-end infinite;
 }
 
 @-webkit-keyframes typing {
@@ -465,7 +501,7 @@ header .flexContainer .coffeeContainer {
     width: 100%;
   }
 }
-@-webkit-keyframes blink-caret {
+@-webkit-keyframes blinking-cursor {
   from, to {
     border-color: transparent;
   }
@@ -473,7 +509,7 @@ header .flexContainer .coffeeContainer {
     border-color: rgb(232, 10, 121);
   }
 }
-@keyframes blink-caret {
+@keyframes blinking-cursor {
   from, to {
     border-color: transparent;
   }
@@ -522,29 +558,30 @@ header .flexContainer .coffeeContainer {
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
 }
 .projects li {
   margin: 1rem;
   max-width: 35vw;
   text-align: center;
+  margin: 0 auto;
 }
 .projects li img {
-  border-radius: 10%;
-  width: 100%;
+  border-radius: 30px;
+  width: 500px;
   border: 1px solid black;
-  margin: 1rem;
+  margin: 5rem auto;
   transition: 0.2s ease;
 }
 .projects li img:hover, .projects li img:focus {
   box-shadow: 0.2rem 0.2rem rgb(232, 10, 121);
-  transform: scale(1.25);
+  transform: scale(1.4);
 }
 .projects li a {
   padding: 0.5rem 1rem;
-  background-color: #FFF;
+  background-color: rgb(218, 236, 242);
   border: 2px solid #BBACD8;
-  border-radius: 10%;
+  border-radius: 30px;
   margin: 2rem 1rem;
 }
 .projects li a:hover, .projects li a:focus {
@@ -556,33 +593,44 @@ header .flexContainer .coffeeContainer {
 }
 .contact h2,
 .contact p,
-.contact fieldset,
-.contact button {
-  margin: 1rem;
+.contact fieldset {
+  padding: 1rem;
+}
+.contact form {
+  margin: 0 auto;
+  background: rgb(218, 236, 242);
+  padding: 1rem 2rem;
+  width: 90%;
+  max-width: 80vw;
+  border-radius: 5%;
+}
+.contact form input,
+.contact form textarea {
+  border: 0;
+  margin: 0.75rem 0;
+  outline: none;
+  border-radius: 30px;
+  padding: 1rem;
+  resize: none;
 }
 .contact fieldset {
+  display: flex;
+  flex-direction: column;
   border: none;
 }
-.contact fieldset input[type=text],
-.contact fieldset textarea {
-  font-size: 1rem;
-  padding: 0.5rem;
-  width: 80%;
-}
-.contact fieldset textarea {
-  height: 10rem;
-}
 .contact fieldset button {
-  border: 2px solid #FFF;
-  padding: 1rem 2rem;
-  border-radius: 10%;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  margin: 0 auto;
+  border: 1px solid #BBACD8;
+  cursor: pointer;
 }
 .contact fieldset button:hover, .contact fieldset button:focus {
   background-color: rgb(232, 10, 121);
 }
 
 footer {
-  background-color: #FFF;
+  background-color: rgb(218, 236, 242);
 }
 footer p {
   text-align: center;
@@ -595,22 +643,65 @@ footer p {
   }
 }
 @media (max-width: 1500px) {
-  .typing h1 {
+  header .typing h1 {
     font-size: 3rem;
   }
 }
-@media (max-width: 1000px) {
-  .typing h1 {
+@media (max-width: 1300px) {
+  body {
+    text-align: center;
+  }
+  header .typing h1 {
     font-size: 2rem;
   }
-}
-@media (max-width: 700px) {
-  .typing h1 {
-    font-size: 1.5rem;
+  header .flexContainer .coffeeContainer {
+    margin: 50% 20% 0 0;
+  }
+  .slideOutNav .mainMenu a {
+    font-size: 1rem;
+  }
+  .slideOutNav .socialContactContainer ul {
+    flex-direction: column;
+  }
+  .projects ul {
+    flex-direction: column;
+  }
+  .projects ul li {
+    max-width: 80vw;
+  }
+  .projects ul li img {
+    width: 100%;
   }
 }
-@media (max-width: 500px) {
-  .typing h1 {
-    font-size: 1.25rem;
+@media (max-width: 960px) {
+  header .typing h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .skills .iconContainer {
+    margin: 0;
+    max-width: 100%;
+  }
+  .skills .iconContainer ul li {
+    width: 30%;
+    margin: 10% auto;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 650px) {
+  header .typing h1 {
+    font-size: 1rem;
+  }
+  header .flexContainer .coffeeContainer {
+    margin: 120px 0 0 -60px;
+  }
+  header .flexContainer .imgContainer {
+    max-width: 50vw;
+  }
+  header .flexContainer .socialMediaContainer {
+    width: 50%;
+  }
+  .navBar .wrapper .logo h2 {
+    margin: 0 auto;
   }
 }
