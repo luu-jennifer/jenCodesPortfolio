@@ -54,17 +54,20 @@
     max-width: 35vw;
     text-align: center;
     margin: 0 auto;
+    p {
+      padding-bottom: 1rem;
+    }
     img {
       border-radius: 30px;
       width: 500px;
       border: 1px solid black;
-      margin: 5rem auto;
+      margin: 5rem auto 2rem auto;
       // focus animation  
       transition: .2s ease;
       &:hover,
       &:focus {
           box-shadow: .2rem .2rem $tertiary;
-          transform: scale(1.4);
+          transform: scale(1.2);
         }
     }
     a {

@@ -566,16 +566,19 @@ header .flexContainer .coffeeContainer {
   text-align: center;
   margin: 0 auto;
 }
+.projects li p {
+  padding-bottom: 1rem;
+}
 .projects li img {
   border-radius: 30px;
   width: 500px;
   border: 1px solid black;
-  margin: 5rem auto;
+  margin: 5rem auto 2rem auto;
   transition: 0.2s ease;
 }
 .projects li img:hover, .projects li img:focus {
   box-shadow: 0.2rem 0.2rem rgb(232, 10, 121);
-  transform: scale(1.4);
+  transform: scale(1.2);
 }
 .projects li a {
   padding: 0.5rem 1rem;
