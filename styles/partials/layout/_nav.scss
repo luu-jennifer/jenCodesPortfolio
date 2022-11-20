@@ -37,7 +37,7 @@
   width: 100%;
   max-width: 15vw;
   height: 100%;
-  background-color: $primary;
+  background-color: $black;
   color: $white;
   display: flex;
   flex-direction: column;
@@ -55,6 +55,9 @@
     position: absolute;
     margin-bottom: 400px;
     margin-right: 10px;
+    button {
+      background-color: $black;
+    }
   }
 
   .mainMenu a {
@@ -72,6 +75,7 @@
       width: 3rem;
     }
   }
+  
   img {
     &:hover,
     &:focus {
